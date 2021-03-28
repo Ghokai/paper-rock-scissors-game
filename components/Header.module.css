@@ -1,0 +1,35 @@
+.header {
+  @apply border-2
+    border-gray-400
+    rounded-md
+    p-4
+    flex
+    flex-row
+    w-10/12
+    md:w-2/3
+    justify-between
+    mt-10;
+}
+
+.score {
+  @apply flex
+    flex-col
+    bg-gray-100
+    py-4
+    px-8
+    items-center
+    rounded-md
+    justify-between;
+}
+
+.scoreTitle {
+  @apply text-blue-600
+    font-bold
+    text-sm;
+}
+
+.scoreNumber {
+  @apply text-4xl
+    text-gray-700
+    font-extrabold;
+}

@@ -1,122 +1,161 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.wrapper {
+  @apply bg-blue-800
+  relative
+  w-full
+  min-h-screen
+  flex
+  flex-col
+  items-center
+  justify-start;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.game {
+  @apply mt-24
+  relative;
+}
+
+.gameItem {
+  @apply absolute;
+}
+
+.paper {
+  @apply py-8
+  px-9
+  bg-white
+  border-8
+  rounded-full
+  border-blue-300
+  -top-16
+  -left-8;
+}
+
+.scissors {
+  @apply py-8
+  px-9
+  bg-white
+  border-8
+  rounded-full
+  border-yellow-400
+  -top-16
+  -right-8;
+}
+
+.rock {
+  @apply py-9
+  px-9
+  bg-white
+  border-8
+  rounded-full
+  border-red-500
+  -bottom-12
+  left-20;
 }
 
 .footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply absolute
+  bottom-8
+  md:right-8;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.rulesButton {
+  @apply px-6
+  py-1
+  text-white
+  border-white
+  border-2
+  rounded-md
+  hover:bg-blue-900;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.modalContainer {
+  @apply z-0
+  absolute
+  bg-gray-900
+  bg-opacity-80
+  w-full
+  min-h-screen
+  flex
+  flex-col
+  justify-center
+  items-center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.rulesModal {
+  @apply bg-white
+  p-8
+  rounded-md;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.rulesModalHeader {
+  @apply mb-10
+  flex
+  flex-row
+  justify-between;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.modalClose {
+  @apply cursor-pointer;
 }
 
-.title,
-.description {
-  text-align: center;
+.modalTitle {
+  @apply font-extrabold
+  text-lg
+  text-gray-700;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.gameResult {
+  @apply flex
+  flex-row
+  flex-wrap
+  md:flex-nowrap
+  justify-between
+  w-10/12
+  md:w-2/3
+  mt-10;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.resultPanel {
+  @apply flex
+  flex-col
+  items-center;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+.resultTitle {
+  @apply text-white
+  mt-5 mb-10
+  font-extrabold
+  text-lg;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+.winnerPanel {
+  @apply flex
+  flex-col
+  justify-center
+  items-center
+  opacity-0
+  order-1
+  md:order-none
+  w-full
+  md:w-auto
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.winnerPanelShow {
+  @apply transition-opacity
+  duration-700
+  opacity-100;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.replayButtonPanel {
+  @apply mb-5;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.replayButton {
+  @apply bg-white
+  font-bold
+  text-lg
+  text-red-500
+  rounded-md
+  px-4
+  py-1
+  hover:text-red-900;
 }
